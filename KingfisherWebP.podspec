@@ -8,16 +8,18 @@ Pod::Spec.new do |s|
 KingfisherWebP is an extension of the popular library [Kingfisher](https://github.com/onevcat/Kingfisher), providing a ImageProcessor and CacheSerializer for you to conveniently handle the WebP format.
                        DESC
 
-  s.homepage         = 'https://github.com/yeatse/KingfisherWebP'
+  s.homepage         = 'https://github.com/duzhongjieqiji/KingfisherWebP'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Yang Chao' => 'iyeatse@gmail.com' }
-  s.source           = { :git => 'https://github.com/yeatse/KingfisherWebP.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/yeatse'
+  s.author           = { 'qiji' => 'duzhongjieqiji@163.com' }
+  s.source           = { :git => 'https://github.com/duzhongjieqiji/KingfisherWebP.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/qiji'
 
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '3.0'
 #  s.osx.deployment_target = '10.12'
+
+  s.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES'}
 
   s.source_files = 'KingfisherWebP/Classes/**/*'
   s.pod_target_xcconfig = {
@@ -34,7 +36,7 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
     'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
   }
 
-  s.dependency 'Kingfisher', '~> 5.8'
-  s.dependency 'libwebp', '>= 0.5.0'
+  s.dependency 'Kingfisher'
+  s.dependency 'libwebp'
   
 end
